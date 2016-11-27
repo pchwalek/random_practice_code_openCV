@@ -17,8 +17,7 @@ while True:
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
-       # flags=cv2.CASCADE_SCALE_IMAGE
-        flags=0
+        flags=cv2.CASCADE_SCALE_IMAGE
     )
 
     # Draw a rectangle around the faces
