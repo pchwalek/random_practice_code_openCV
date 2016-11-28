@@ -1,7 +1,7 @@
 import cv2
 import sys
 
-cascPath = '/Users/patrickchwalek/Desktop/Git/opencv/opencv/data/haarcascades/haarcascade_frontalface_alt.xml'
+cascPath = '/opencv-3.1.0/data/haarcascades/haarcascade_frontalface_alt.xml'
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 video_capture = cv2.VideoCapture(0)
@@ -10,15 +10,15 @@ while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
 
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+ #   gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     faces = faceCascade.detectMultiScale(
-        gray,
+#        gray,
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
-       # flags=cv2.CASCADE_SCALE_IMAGE
-        flags=0
+        flags=cv2.CASCADE_SCALE_IMAGE
+#        flags=0
     )
 
     # Draw a rectangle around the faces
