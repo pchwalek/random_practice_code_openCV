@@ -18,7 +18,10 @@ while True:
         minNeighbors=5,
         minSize=(30, 30),
         flags=cv2.CASCADE_SCALE_IMAGE
+<<<<<<< HEAD
 #        flags=0
+=======
+>>>>>>> origin/random_practice_code_openCV
     )
 
     # Draw a rectangle around the faces
